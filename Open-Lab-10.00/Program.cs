@@ -6,13 +6,13 @@ namespace Open_Lab_10._00
     {
         static void Main(string[] args)
         {
-            Book LOTR = new Book();
-            LOTR.Title = "Mato sa uci";
-                       
+            Book LOTR = new Book("Mato sa uci", 2000, "roman", "Peto", 2020 );
+                                 
 
-            Console.WriteLine(LOTR.Title);
+            Console.WriteLine(LOTR.ToString());
+           
 
-            
+
         }
     }
 }
