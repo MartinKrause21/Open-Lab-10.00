@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.Reflection;
+using System.Runtime.InteropServices;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 
@@ -16,31 +17,58 @@ namespace Open_Lab_10._00
         private string author;
         private int releaseDate;
 
-      
-        public void SetTitle(string titles)
-        {
-            title = titles;
-        }
 
-        public void SetPages( int page)
+        public string Title
         {
-            pages = page;
+            get { return title; }
+            set { title = value; }
         }
+        public int Pages
+        {
+            get { return pages; }
+            set
+            {
+                if (value > 0)
+                {
+                    pages = value;
+                }
+                else
+                {
+                    pages = 1;
+                }
+            }
 
-        public void SetCathegory (string cathegor)
-        {
-            cathegory = cathegor;
         }
+        public string Cathegory
+        {
+            get { return cathegory; }
+            set { cathegory = value; }
+        }
+        public string Author
+        {
+            get { return author; }
+            set { author = value; }
+        }
+        public int ReleaseDate
+        {
+            get { return releaseDate; }
+            set
+            {
+                if (value >= 1450 && value <= 2021)
+                {
+                    releaseDate = value;
+                }
+                else
+                {
+                    releaseDate = -1;
+                }
+            }
 
-        public void SetAutor (string name)
-        {
-            author = name;
         }
+       
 
-        public void SetRlsDate (int rlsdate)
-        {
-            releaseDate = rlsdate;
-        }
+
+
 
 
         public override string ToString()
