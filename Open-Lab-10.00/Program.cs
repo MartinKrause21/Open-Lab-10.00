@@ -13,36 +13,31 @@ namespace Open_Lab_10._00
             LOTR.Cathegory = "roman";
             LOTR.Author = "mirko";
             LOTR.ReleaseDate = 2021;
+            Console.WriteLine(LOTR.ToString());
+
+            Console.WriteLine();
 
             Book LOTR2 = new Book();
-            Console.WriteLine(LOTR2.Cathegory);
-            Console.WriteLine(LOTR2.Author);
-            Console.WriteLine(LOTR2.ReleaseDate);
-            Console.WriteLine(LOTR2.Title);
-            Console.WriteLine(LOTR2.Pages);
+            Console.WriteLine(LOTR2.ToString());
 
             Console.WriteLine();
 
             Book LOTR3 = new Book("Programovanie v HTML", 310 );
-            Console.WriteLine(LOTR3.Cathegory);
-            Console.WriteLine(LOTR3.Author);
-            Console.WriteLine(LOTR3.ReleaseDate);
-            Console.WriteLine(LOTR3.Title);
-            Console.WriteLine(LOTR3.Pages);
+            Console.WriteLine(LOTR3.ToString());
 
             Console.WriteLine();
 
             Book HOBIT = new Book("scifi", 2010, "J.G.T", "Dobra kniha", 120 );
-            Console.WriteLine(HOBIT.Cathegory);
-            Console.WriteLine(HOBIT.Author);
-            Console.WriteLine(HOBIT.ReleaseDate);
-            Console.WriteLine(HOBIT.Title);
-            Console.WriteLine(HOBIT.Pages);
+            Console.WriteLine(HOBIT.ToString());
 
             Console.WriteLine();
+                       
 
-            Console.WriteLine(LOTR.ToString());
-
+            for (int i = 0; i < 4; i++)
+            {
+                Console.WriteLine(Book.categoryList[i]);
+            }
+            
 
 
         }

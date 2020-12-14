@@ -17,6 +17,14 @@ namespace Open_Lab_10._00
         private string author;
         private int releaseDate;
 
+
+        /// <summary>
+        /// v tomto liste sa nachadzaju typy knih
+        /// </summary>
+        /// 
+        public static List<string> categoryList = new List<string> { "detské", "romantické", "náučné", "sci-fi", "dobrodružné" };
+
+
         public Book()
         {
             title = "-1";
@@ -42,7 +50,7 @@ namespace Open_Lab_10._00
             this.cathegory = cathegory;
             this.author = author;
             this.releaseDate = releaseDate;
-
+        
         }
 
 
@@ -96,17 +104,12 @@ namespace Open_Lab_10._00
         }
        
 
-
-
-
-
         public override string ToString()
         {
             return $"{this.title}, {this.pages}, {this.cathegory}, {this.author},{this.releaseDate}";
         }
 
-
-
+             
 
 
 
